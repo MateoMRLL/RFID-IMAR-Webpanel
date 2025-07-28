@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  height: 30%;
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+}
+
+.header-title {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-subtitle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
