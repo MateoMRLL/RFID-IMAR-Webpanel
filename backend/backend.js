@@ -46,6 +46,38 @@ app.get("/logs/tag/:tag", (req, res) => {
   });
 });
 
+app.get("/logs/search", (req, res) => {
+  const { tag, antenna } = req.query;
+
+  let sql = "SELECT * FROM serial_logs WHERE 1=1";
+  let params = [];
+
+  // Add tag filter if provided (using LIKE for partial matching)
+  if (tag && tag !== "") {
+    sql += " AND data LIKE ?";
+    params.push(`%${tag}%`);
+  }
+
+  // Add antenna filter if provided
+  if (antenna && antenna !== "All") {
+    sql += " AND antenna = ?";
+    params.push(antenna);
+  }
+
+  console.log("Combined search - SQL:", sql);
+  console.log("Combined search - Params:", params);
+
+  db.query(sql, params, (err, data) => {
+    if (err) {
+      console.error("Database error:", err);
+      return res.status(500).json(err);
+    }
+
+    console.log(`Found ${data.length} results for combined search`);
+    return res.json(data);
+  });
+});
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
