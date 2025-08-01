@@ -25,7 +25,7 @@ A web application that allows users to filter and view RFID tag logs by tag numb
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/MateoMRL/.git
+   git clone https://github.com/MateoMRLL/RFID-IMAR-Webpanel.git
    cd rfid-log-viewer
    ```
 
@@ -37,13 +37,15 @@ A web application that allows users to filter and view RFID tag logs by tag numb
 
 3. **Run the backend** (assuming the backend uses Express):
 
+   in the backend folder :
    ```bash
    node backend.js
    ```
 
 4. **Start the React app**:
+   in the frontend folder :
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## API Endpoints
