@@ -11,7 +11,7 @@ A web application that allows users to filter and view RFID tag logs by tag numb
 ## Tech Stack
 
 - **Frontend**: React (with functional components & hooks)
-- **Backend**: Node.js/Express (assumed from `backend.js`)
+- **Backend**: Node.js/Express
 - **Styling**: CSS (via `App.css`)
 
 ## Getting Started
